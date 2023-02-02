@@ -244,15 +244,17 @@
             this.partSettings.Controls.Add(this.Name_textBox);
             this.partSettings.Controls.Add(this.quantity_counter);
             this.partSettings.Controls.Add(this.saveSettingsBtn);
+            this.partSettings.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partSettings.Location = new System.Drawing.Point(459, 71);
             this.partSettings.Name = "partSettings";
-            this.partSettings.Size = new System.Drawing.Size(511, 615);
+            this.partSettings.Size = new System.Drawing.Size(521, 615);
             this.partSettings.TabIndex = 0;
             this.partSettings.TabStop = false;
             this.partSettings.Text = "Part Settings";
             // 
             // partSettings_close
             // 
+            this.partSettings_close.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partSettings_close.Location = new System.Drawing.Point(280, 526);
             this.partSettings_close.Name = "partSettings_close";
             this.partSettings_close.Size = new System.Drawing.Size(196, 61);
@@ -274,6 +276,7 @@
             // 
             // BinR_counter
             // 
+            this.BinR_counter.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinR_counter.Location = new System.Drawing.Point(403, 442);
             this.BinR_counter.Maximum = new decimal(new int[] {
             1000000,
@@ -281,7 +284,7 @@
             0,
             0});
             this.BinR_counter.Name = "BinR_counter";
-            this.BinR_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinR_counter.Size = new System.Drawing.Size(93, 26);
             this.BinR_counter.TabIndex = 22;
             // 
             // label15
@@ -297,6 +300,7 @@
             // 
             // BinW_counter
             // 
+            this.BinW_counter.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinW_counter.Location = new System.Drawing.Point(403, 414);
             this.BinW_counter.Maximum = new decimal(new int[] {
             1000000,
@@ -304,7 +308,7 @@
             0,
             0});
             this.BinW_counter.Name = "BinW_counter";
-            this.BinW_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinW_counter.Size = new System.Drawing.Size(93, 26);
             this.BinW_counter.TabIndex = 21;
             // 
             // label13
@@ -320,6 +324,7 @@
             // 
             // BinZ_counter
             // 
+            this.BinZ_counter.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinZ_counter.Location = new System.Drawing.Point(187, 464);
             this.BinZ_counter.Maximum = new decimal(new int[] {
             1000000,
@@ -327,7 +332,7 @@
             0,
             0});
             this.BinZ_counter.Name = "BinZ_counter";
-            this.BinZ_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinZ_counter.Size = new System.Drawing.Size(74, 26);
             this.BinZ_counter.TabIndex = 20;
             // 
             // label12
@@ -343,6 +348,7 @@
             // 
             // BinY_counter
             // 
+            this.BinY_counter.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinY_counter.Location = new System.Drawing.Point(186, 436);
             this.BinY_counter.Maximum = new decimal(new int[] {
             1000000,
@@ -350,7 +356,7 @@
             0,
             0});
             this.BinY_counter.Name = "BinY_counter";
-            this.BinY_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinY_counter.Size = new System.Drawing.Size(75, 26);
             this.BinY_counter.TabIndex = 19;
             this.BinY_counter.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
@@ -367,6 +373,7 @@
             // 
             // BinX_counter
             // 
+            this.BinX_counter.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinX_counter.Location = new System.Drawing.Point(186, 408);
             this.BinX_counter.Maximum = new decimal(new int[] {
             1000000,
@@ -374,7 +381,7 @@
             0,
             0});
             this.BinX_counter.Name = "BinX_counter";
-            this.BinX_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinX_counter.Size = new System.Drawing.Size(75, 27);
             this.BinX_counter.TabIndex = 18;
             // 
             // label10
@@ -390,9 +397,10 @@
             // 
             // supplier_textBox
             // 
+            this.supplier_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplier_textBox.Location = new System.Drawing.Point(177, 366);
             this.supplier_textBox.Name = "supplier_textBox";
-            this.supplier_textBox.Size = new System.Drawing.Size(270, 22);
+            this.supplier_textBox.Size = new System.Drawing.Size(306, 22);
             this.supplier_textBox.TabIndex = 17;
             // 
             // label9
@@ -408,9 +416,10 @@
             // 
             // partNumber_textBox
             // 
+            this.partNumber_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partNumber_textBox.Location = new System.Drawing.Point(177, 323);
             this.partNumber_textBox.Name = "partNumber_textBox";
-            this.partNumber_textBox.Size = new System.Drawing.Size(270, 22);
+            this.partNumber_textBox.Size = new System.Drawing.Size(306, 22);
             this.partNumber_textBox.TabIndex = 16;
             // 
             // label8
@@ -426,9 +435,10 @@
             // 
             // powerRating_textBox
             // 
+            this.powerRating_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerRating_textBox.Location = new System.Drawing.Point(177, 280);
             this.powerRating_textBox.Name = "powerRating_textBox";
-            this.powerRating_textBox.Size = new System.Drawing.Size(270, 22);
+            this.powerRating_textBox.Size = new System.Drawing.Size(306, 22);
             this.powerRating_textBox.TabIndex = 15;
             // 
             // label7
@@ -444,9 +454,10 @@
             // 
             // voltageRating_textBox
             // 
+            this.voltageRating_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voltageRating_textBox.Location = new System.Drawing.Point(177, 240);
             this.voltageRating_textBox.Name = "voltageRating_textBox";
-            this.voltageRating_textBox.Size = new System.Drawing.Size(270, 22);
+            this.voltageRating_textBox.Size = new System.Drawing.Size(306, 22);
             this.voltageRating_textBox.TabIndex = 14;
             // 
             // label6
@@ -473,9 +484,10 @@
             // 
             // package_textBox
             // 
+            this.package_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.package_textBox.Location = new System.Drawing.Point(177, 158);
             this.package_textBox.Name = "package_textBox";
-            this.package_textBox.Size = new System.Drawing.Size(270, 22);
+            this.package_textBox.Size = new System.Drawing.Size(306, 22);
             this.package_textBox.TabIndex = 12;
             // 
             // label3
@@ -491,9 +503,10 @@
             // 
             // BinID_textBox
             // 
+            this.BinID_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BinID_textBox.Location = new System.Drawing.Point(177, 32);
             this.BinID_textBox.Name = "BinID_textBox";
-            this.BinID_textBox.Size = new System.Drawing.Size(270, 22);
+            this.BinID_textBox.Size = new System.Drawing.Size(306, 22);
             this.BinID_textBox.TabIndex = 9;
             // 
             // label2
@@ -509,9 +522,10 @@
             // 
             // Value_textBox
             // 
+            this.Value_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Value_textBox.Location = new System.Drawing.Point(177, 117);
             this.Value_textBox.Name = "Value_textBox";
-            this.Value_textBox.Size = new System.Drawing.Size(270, 22);
+            this.Value_textBox.Size = new System.Drawing.Size(306, 22);
             this.Value_textBox.TabIndex = 11;
             // 
             // label1
@@ -527,26 +541,29 @@
             // 
             // Name_textBox
             // 
+            this.Name_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_textBox.Location = new System.Drawing.Point(177, 76);
             this.Name_textBox.Name = "Name_textBox";
-            this.Name_textBox.Size = new System.Drawing.Size(270, 22);
+            this.Name_textBox.Size = new System.Drawing.Size(306, 22);
             this.Name_textBox.TabIndex = 10;
             // 
             // quantity_counter
             // 
-            this.quantity_counter.Location = new System.Drawing.Point(227, 199);
+            this.quantity_counter.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity_counter.Location = new System.Drawing.Point(177, 199);
             this.quantity_counter.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.quantity_counter.Name = "quantity_counter";
-            this.quantity_counter.Size = new System.Drawing.Size(174, 22);
+            this.quantity_counter.Size = new System.Drawing.Size(158, 22);
             this.quantity_counter.TabIndex = 13;
             // 
             // saveSettingsBtn
             // 
-            this.saveSettingsBtn.Location = new System.Drawing.Point(50, 526);
+            this.saveSettingsBtn.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSettingsBtn.Location = new System.Drawing.Point(49, 526);
             this.saveSettingsBtn.Name = "saveSettingsBtn";
             this.saveSettingsBtn.Size = new System.Drawing.Size(196, 61);
             this.saveSettingsBtn.TabIndex = 23;

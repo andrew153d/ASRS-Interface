@@ -136,6 +136,8 @@ namespace ASRS_Interface
             voltageRating_textBox.Text = "";
             powerRating_textBox.Text = ""; 
             supplier_textBox.Text = "";
+            partNumber_textBox.Text = "";
+            quantity_counter.Value = 0;
             BinX_counter.Value = 0;
             BinY_counter.Value = 0; 
             BinZ_counter.Value = 0; 
@@ -214,8 +216,16 @@ namespace ASRS_Interface
                 {
                     part = new Part();
                 }
-
-                part.BinID = BinID_textBox.Text;
+                if (BinID_textBox.Text.Equals(""))
+                {
+                    Random rnd = new Random();
+                    part.BinID = rnd.Next(1000, 10000).ToString();
+                }
+                else
+                {
+                    part.BinID = BinID_textBox.Text;
+                }
+                
                 part.Name = Name_textBox.Text;
                 part.Value = Value_textBox.Text;
                 part.Package = package_textBox.Text;
@@ -277,6 +287,7 @@ namespace ASRS_Interface
             ListViewItem lvi = listBox.SelectedItems[0];
             partList.removePartByBinID(lvi.Text);
             refreshListBox(partList);
+            printPartsToFile();
         }
     }
 }
