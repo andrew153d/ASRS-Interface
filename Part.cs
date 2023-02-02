@@ -8,13 +8,13 @@ namespace ASRS_Interface
 {
     public class Part : IEquatable<Part>
     {
-        public int BinID { get; set; }
+        public string BinID { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
         public string Package { get; set; }
         public int Quantity{ get; set; }
-        public int voltageRating { get; set; }
-        public int powerRating { get; set; }
+        public string voltageRating { get; set; }
+        public string powerRating { get; set; }
         public string Part_Number { get; set; }
         public string Supplier{ get; set; }
         public int Bin_X { get; set; }
@@ -40,7 +40,7 @@ namespace ASRS_Interface
         }
         public override int GetHashCode()
         {
-            return BinID;
+            return int.Parse(BinID);
         }
         public bool Equals(Part other)
         {

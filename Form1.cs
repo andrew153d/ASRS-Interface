@@ -33,16 +33,15 @@ namespace ASRS_Interface
         const string Part_BinR = "Bin Rotation";
         const string Empty_String = "~";
 
-        public List<Part> partList = new List<Part>();
+        private Part partToModify = new Part();
+        private bool ModifyPartflag = false;
+
+        //public List<Part> partList = new List<Part>();
+        public PartCollection partList = new PartCollection();
         public Form1()
         {
             InitializeComponent();
             this.Load += new System.EventHandler(this.Form1_Load);
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         private void printPartsToFile()
         {
@@ -76,13 +75,17 @@ namespace ASRS_Interface
             listBox.FullRowSelect = true;
             listBox.AllowColumnReorder = true;
             //listBox.CheckBoxes = true; //uncomment when multiple part retreivl is possbile
-            listBox.Columns.Add("Name", 100, HorizontalAlignment.Center);
-            listBox.Columns.Add("Value", 100, HorizontalAlignment.Center);
-            listBox.Columns.Add("Package", 100, HorizontalAlignment.Center);
-            listBox.Columns.Add("Quantity", 100, HorizontalAlignment.Center);
+            
+            listBox.Columns.Add(Bin_ID_String, 100,      HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Name_String, 100,  HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Value_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Package_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Quantity_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_VRating_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_PRating_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Supplier_String, 100, HorizontalAlignment.Center);
 
-
-            /*using (StreamReader sr = new StreamReader("C:\\Users\\Andre\\Documents\\ASRS\\ASRS Interface\\MachineProfile.txt"))
+            using (StreamReader sr = new StreamReader("C:\\Users\\Andre\\Documents\\ASRS\\ASRS Interface\\MachineProfile.txt"))
             {
                 string firstLine = sr.ReadLine();
                 string[] names = firstLine.Split('|');
@@ -91,13 +94,13 @@ namespace ASRS_Interface
                     string line = sr.ReadLine();
                     string[] values = line.Split(',');
                     Part part = new Part();
-                    part.BinID =         names.Contains(Bin_ID_String) ? int.Parse(values[Array.IndexOf(names, Bin_ID_String)]) : 0;
+                    part.BinID =         names.Contains(Bin_ID_String) ? values[Array.IndexOf(names, Bin_ID_String)] : Empty_String;
                     part.Name =          names.Contains(Part_Name_String) ? values[Array.IndexOf(names, Part_Name_String)] : Empty_String;
                     part.Value =         names.Contains(Part_Value_String) ? values[Array.IndexOf(names, Part_Value_String)] : Empty_String;
                     part.Package =       names.Contains(Part_Package_String) ? values[Array.IndexOf(names, Part_Package_String)] : Empty_String;
                     part.Quantity =      names.Contains(Part_Quantity_String) ? int.Parse(values[Array.IndexOf(names, Part_Quantity_String)]) : 0;
-                    part.voltageRating = names.Contains(Part_VRating_String) ? int.Parse(values[Array.IndexOf(names, Part_VRating_String)]) : 0;
-                    part.powerRating =   names.Contains(Part_PRating_String) ? int.Parse(values[Array.IndexOf(names, Part_PRating_String)]) : 0;
+                    part.voltageRating = names.Contains(Part_VRating_String) ? values[Array.IndexOf(names, Part_VRating_String)] : "";
+                    part.powerRating =   names.Contains(Part_PRating_String) ? values[Array.IndexOf(names, Part_PRating_String)] : "";
                     part.Part_Number =   names.Contains(Part_Number_String) ? values[Array.IndexOf(names, Part_Number_String)] : Empty_String;
                     part.Supplier =      names.Contains(Part_Supplier_String) ? values[Array.IndexOf(names, Part_Supplier_String)] : Empty_String;
                     part.Bin_X =         names.Contains(Part_BinX) ? int.Parse(values[Array.IndexOf(names, Part_BinX)]) : 0;
@@ -108,17 +111,9 @@ namespace ASRS_Interface
                     partList.Add(part);
                     
                 }
-            }*/
-
-            foreach(Part p in partList)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = p.Name;
-                lvi.SubItems.Add(p.Value);
-                lvi.SubItems.Add(p.Package);
-                lvi.SubItems.Add(p.Quantity.ToString());
-                listBox.Items.Add(lvi);
             }
+
+            refreshListBox();
         }
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -139,14 +134,14 @@ namespace ASRS_Interface
         private void AddPart_Click(object sender, EventArgs e)
         {
             partSettings.Visible = true;
-            BinID_textBox.Text = "0";
-            Name_textBox.Text = "0";
-            Value_textBox.Text = "0";
-            package_textBox.Text = "0"; 
-            quantity_counter.Value = 0;
-            voltageRating_textBox.Text = "0";
-            powerRating_textBox.Text = "0"; 
-            supplier_textBox.Text = "~";
+            BinID_textBox.Text = "";
+            Name_textBox.Text = "";
+            Value_textBox.Text = "";
+            package_textBox.Text = ""; 
+            //quantity_counter.Value = 0;
+            voltageRating_textBox.Text = "";
+            powerRating_textBox.Text = ""; 
+            supplier_textBox.Text = "";
             BinX_counter.Value = 0;
             BinY_counter.Value = 0; 
             BinZ_counter.Value = 0; 
@@ -160,52 +155,109 @@ namespace ASRS_Interface
             storeBin.Visible = false;
         }
 
+        private void loadPartSettings(ref Part p)
+        {
+           
+            BinID_textBox.Text = p.BinID;
+            Name_textBox.Text = p.Name;
+            Value_textBox.Text = p.Value;
+            package_textBox.Text = p.Package;
+            quantity_counter.Value = p.Quantity;
+            voltageRating_textBox.Text = p.voltageRating;
+            powerRating_textBox.Text = p.powerRating;
+            supplier_textBox.Text = p.Supplier;
+            BinX_counter.Value = p.Bin_X;
+            BinY_counter.Value = p.Bin_Y;
+            BinZ_counter.Value = p.Bin_Z;
+            BinW_counter.Value = p.Bin_Width;
+            BinR_counter.Value = p.Bin_R;
+        }
+
         private void ModifyPart_Click(object sender, EventArgs e)
         {
-            partSettings.Visible = true;
-        }
+            
 
+            try
+            {
+                ListViewItem lvi = listBox.SelectedItems[0];
+                Console.WriteLine(lvi.Text);
+                partSettings.Visible = true;
+                Part p = partList.getPartByBinID(lvi.Text);
+                ModifyPartflag = true;
+                partToModify = p;
+                loadPartSettings(ref p);
+            }
+            catch (Exception ex) {
+                return;
+            }
+        
+        }
+        private void refreshListBox()
+        {
+            listBox.Items.Clear();
+            foreach (Part p in partList)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = p.BinID.ToString();
+                lvi.SubItems.Add(p.Name);
+                lvi.SubItems.Add(p.Value);
+                lvi.SubItems.Add(p.Package);
+                lvi.SubItems.Add(p.Quantity.ToString());
+                lvi.SubItems.Add(p.voltageRating.ToString());
+                lvi.SubItems.Add(p.powerRating.ToString());
+                lvi.SubItems.Add(p.Supplier);
+                listBox.Items.Add(lvi);
+            }
+        }
         private void saveSettingsBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Part part;
+                if (ModifyPartflag)
+                {
+                    part = partToModify;
+                    
+                }
+                else
+                {
+                    part = new Part();
+                }
+                part.BinID = BinID_textBox.Text;
+                part.Name = Name_textBox.Text;
+                part.Value = Value_textBox.Text;
+                part.Package = package_textBox.Text;
+                part.Quantity = (int)quantity_counter.Value;
+                part.voltageRating = voltageRating_textBox.Text;
+                part.powerRating = powerRating_textBox.Text;
+                part.Part_Number = partNumber_textBox.Text;
+                part.Supplier = supplier_textBox.Text;
+                part.Bin_X = (int)BinX_counter.Value;
+                part.Bin_Y = (int)BinY_counter.Value;
+                part.Bin_Z = (int)BinZ_counter.Value;
+                part.Bin_Width = (int)BinW_counter.Value;
+                part.Bin_R = (int)BinR_counter.Value;
+                if (!ModifyPartflag)
+                {
+                    partList.Add(part);
+                }
+                else
+                {
+                    ModifyPartflag = false;
+                }
+                
+            }
+            catch(Exception ex)
+            {
+
+                return;
+            }
+            
             partSettings.Visible = false;
-            Part part = new Part();
-            part.BinID = int.Parse(BinID_textBox.Text);
-            part.Name = Name_textBox.Text;
-            part.Value = Value_textBox.Text;
-            part.Package = package_textBox.Text;
-            part.Quantity = (int)quantity_counter.Value;
-            part.voltageRating = int.Parse(voltageRating_textBox.Text);
-            part.powerRating = int.Parse(powerRating_textBox.Text);
-            part.Part_Number = partNumber_textBox.Text;
-            part.Supplier = supplier_textBox.Text;
-            part.Bin_X = (int)BinX_counter.Value;
-            part.Bin_Y = (int) BinY_counter.Value;
-            part.Bin_Z = (int)BinZ_counter.Value;
-            part.Bin_Width = (int)BinW_counter.Value;
-            part.Bin_R = (int)BinR_counter.Value;
-            partList.Add(part);
             printPartsToFile();
+            refreshListBox();
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
@@ -215,6 +267,11 @@ namespace ASRS_Interface
         private void cancelStore_Click(object sender, EventArgs e)
         {
             storeBin.Visible = false;
+        }
+
+        private void partSettings_close_Click(object sender, EventArgs e)
+        {
+            partSettings.Visible = false;
         }
     }
 }
