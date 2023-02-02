@@ -9,6 +9,13 @@ namespace ASRS_Interface
 
     public class PartCollection : List<Part>
     {
+        public PartCollection() { }
+        private PartCollection(List<Part> inputList) {
+            foreach (var part in inputList)
+            {
+                Add(part);
+            }
+        }
         public Part getPartByBinID(string BinID)
         {
            foreach(Part p in this)
@@ -43,5 +50,13 @@ namespace ASRS_Interface
             }
             return outlist;
         }
+        public PartCollection sortByRetreive()
+        {
+            //List<Part> out = this.OrderByDescending(p => p.times_accessed).ToList();
+            PartCollection retlist = new PartCollection(this.OrderByDescending(p => p.times_accessed).ToList());
+
+            return retlist;
+        }
+        
     }
 }

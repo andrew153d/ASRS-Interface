@@ -1,13 +1,13 @@
-Bin ID|Name|Value|Package|Quantity|Voltage Rating|Power Rating|Supplier Part Number|Supplier|Bin X|Bin Y|Bin Z|Bin Width|Bin Rotation
-5288,Capacitor,10uf,0603,95,10V,,1276-1871-1-ND,Digikey,0,0,0,0,0
-6636,Capacitor,10000pf,0402,100,16V,,478-1114-1-ND,Digikey,0,0,0,0,0
-4428,Capacitor,0.1uf,0402,87,16V,,,Digikey,0,0,0,0,0
-5083,Resistor,130,0402,100,,1/16W,,Digikey,0,0,0,0,0
-5178,Resistor,5.1k,0402,94,,1/10W,,Digikey,0,0,0,0,0
-7326,Resistor,47k,0402,96,,1/10W,,Digikey,0,0,0,0,0
-8224,Switch Tactile,250GF,SMT,25,,,,Digikey,0,0,0,0,0
-6993,RED LED,1.7Vf,,100,,,,Digikey,0,0,0,0,0
-7470,ESP32-C3-MINI-1,,,5,,,,Digikey,0,0,0,0,0
-7384,Linear Regulator,5V 1A,SOT223,10,5,,AZ1117IH-5.0TRG1DICT-ND,Digikey,0,0,0,0,0
-3528,DRV8311,,,10,,,,Digikey,0,0,0,0,0
-6381,Linear Regulator 3.3V,3.3V 1A,SOT223,10,,,AZ1117IH-3.3TRG1DICT-ND,Digikey,0,0,0,0,0
+Bin ID|Name|Value|Package|Quantity|Voltage Rating|Power Rating|Supplier Part Number|Supplier|Bin X|Bin Y|Bin Z|Bin Width|Bin Rotation|Times Retreived
+5288,Capacitor,10uf,0603,95,10V,,,Digikey,0,0,0,0,0,2
+6636,Capacitor,10000pf,0402,100,16V,,478-1114-1-ND,Digikey,0,0,0,0,0,5
+4428,Capacitor,0.1uf,0402,88,16V,,,Digikey,0,0,0,0,0,1
+5083,Resistor,130,0402,100,,1/16W,,Digikey,0,0,0,0,0,0
+5178,Resistor,5.1k,0402,94,,1/10W,,Digikey,0,0,0,0,0,1
+7326,Resistor,47k,0402,96,,1/10W,,Digikey,0,0,0,0,0,0
+8224,Switch Tactile,250GF,SMT,25,,,,Digikey,0,0,0,0,0,1
+6993,RED LED,1.7Vf,,100,,,,Digikey,0,0,0,0,0,0
+7470,ESP32-C3-MINI-1,,,5,,,,Digikey,0,0,0,0,0,1
+7384,Linear Regulator,5V 1A,SOT223,10,5,,AZ1117IH-5.0TRG1DICT-ND,Digikey,0,0,0,0,0,6
+3528,DRV8311,,,10,,,,Digikey,0,0,0,0,0,0
+6381,Linear Regulator 3.3V,3.3V 1A,SOT223,10,,,,Digikey,0,0,0,0,0,0

@@ -22,14 +22,14 @@ namespace ASRS_Interface
         public int Bin_Z { get; set; }
         public int Bin_Width { get; set; }
         public int Bin_R { get; set; }
-
+        public int times_accessed { get; set; }
 
 
         public override string ToString()
         {
             return BinID.ToString() + ',' + Name + "," + Value.ToString() + "," + Package.ToString() + "," + Quantity.ToString() + "," + voltageRating.ToString() + ","
                 + powerRating.ToString() + "," + Part_Number.ToString() + "," + Supplier.ToString() + "," + Bin_X.ToString() + "," + Bin_Y.ToString() + ","
-                + Bin_Z.ToString() + "," + Bin_Width.ToString() + "," + Bin_R.ToString();
+                + Bin_Z.ToString() + "," + Bin_Width.ToString() + "," + Bin_R.ToString() + "," + times_accessed.ToString();
         }
         public override bool Equals(object obj)
         {

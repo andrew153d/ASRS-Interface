@@ -197,6 +197,7 @@
             this.Retreive.TabIndex = 7;
             this.Retreive.Text = "Retreive Part";
             this.Retreive.UseVisualStyleBackColor = true;
+            this.Retreive.Click += new System.EventHandler(this.Retreive_Click);
             // 
             // listBox
             // 

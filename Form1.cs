@@ -31,6 +31,7 @@ namespace ASRS_Interface
         const string Part_BinZ = "Bin Z";
         const string Part_BinW = "Bin Width";
         const string Part_BinR = "Bin Rotation";
+        const string Part_timesRetreived = "Times Retreived";
         const string Empty_String = "~";
 
         private Part partToModify = new Part();
@@ -53,7 +54,7 @@ namespace ASRS_Interface
                 // Write "Hello" to the file
                 using (StreamWriter writer = new StreamWriter("C:\\Users\\Andre\\Documents\\ASRS\\ASRS Interface\\MachineProfile.txt"))
                 {
-                    string firstLine = Bin_ID_String + "|" + Part_Name_String + "|" + Part_Value_String + "|" + Part_Package_String + "|" + Part_Quantity_String + "|" + Part_VRating_String + "|" + Part_PRating_String + "|" + Part_Number_String + "|" + Part_Supplier_String + "|" + Part_BinX + "|" + Part_BinY + "|" + Part_BinZ + "|" + Part_BinW + "|" + Part_BinR;
+                    string firstLine = Bin_ID_String + "|" + Part_Name_String + "|" + Part_Value_String + "|" + Part_Package_String + "|" + Part_Quantity_String + "|" + Part_VRating_String + "|" + Part_PRating_String + "|" + Part_Number_String + "|" + Part_Supplier_String + "|" + Part_BinX + "|" + Part_BinY + "|" + Part_BinZ + "|" + Part_BinW + "|" + Part_BinR + "|" + Part_timesRetreived;
                     writer.WriteLine(firstLine);
                     foreach(Part p in partList)
                     {
@@ -108,6 +109,7 @@ namespace ASRS_Interface
                     part.Bin_Z =         names.Contains(Part_BinZ) ? int.Parse(values[Array.IndexOf(names, Part_BinZ)]) : 0;
                     part.Bin_Width =     names.Contains(Part_BinW) ? int.Parse(values[Array.IndexOf(names, Part_BinW)]) : 0;
                     part.Bin_R =         names.Contains(Part_BinR) ? int.Parse(values[Array.IndexOf(names, Part_BinR)]) : 0;
+                    part.times_accessed = names.Contains(Part_timesRetreived) ? int.Parse(values[Array.IndexOf(names, Part_timesRetreived)]) : 0;
                     partList.Add(part);
                     
                 }
@@ -288,6 +290,22 @@ namespace ASRS_Interface
             partList.removePartByBinID(lvi.Text);
             refreshListBox(partList);
             printPartsToFile();
+        }
+
+        private void Retreive_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListViewItem lvi = listBox.SelectedItems[0];
+                Part p = partList.searchFor(lvi.Text)[0];
+                p.times_accessed++;
+                refreshListBox(partList.sortByRetreive());
+                printPartsToFile();
+            }
+            catch(Exception ex) {
+                return;
+            }
+            
         }
     }
 }
