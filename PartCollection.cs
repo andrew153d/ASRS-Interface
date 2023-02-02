@@ -20,5 +20,28 @@ namespace ASRS_Interface
             }
            return null;
         }
+        public void removePartByBinID(string BinID)
+        {
+            foreach (Part p in this)
+            {
+                if (p.BinID == BinID)
+                {
+                    this.Remove(p);
+                    return;
+                }
+            }
+        }
+        public PartCollection searchFor(string searchTerm)
+        {
+            PartCollection outlist = new PartCollection();
+            foreach(Part p in this)
+            {
+                if (p.ToString().ToLower().Contains(searchTerm.ToLower()))
+                {
+                    outlist.Add(p);
+                }
+            }
+            return outlist;
+        }
     }
 }

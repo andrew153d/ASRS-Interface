@@ -2,6 +2,6 @@ Bin ID|Name|Value|Package|Quantity|Voltage Rating|Power Rating|Supplier Part Num
 3452,Capacitor,1uf,0603,10,16,,,Digikey,0,0,0,30,0
 7678,Resistor,130,0402,100,,1,,Digikey,0,0,0,3,0
 9328,LED,,,20,2,,,Mouser,0,0,0,10,0
-8,Capacitor,10uf,0603,30,16,0,,,0,0,0,30,0
-203,Capacitor,100uf,0402,30,,,,,0,0,0,30,0
+1000,Capacitor,10uf,0603,30,16,0,,,0,0,0,30,0
+1001,Capacitor,100uf,0402,30,,,,,0,0,0,30,0
 9730,DHT11,,3 Pin THT,1,5,,,Amazon,0,0,0,40,0

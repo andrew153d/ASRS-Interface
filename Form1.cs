@@ -113,15 +113,10 @@ namespace ASRS_Interface
                 }
             }
 
-            refreshListBox();
+            refreshListBox(partList);
         }
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -138,7 +133,6 @@ namespace ASRS_Interface
             Name_textBox.Text = "";
             Value_textBox.Text = "";
             package_textBox.Text = ""; 
-            //quantity_counter.Value = 0;
             voltageRating_textBox.Text = "";
             powerRating_textBox.Text = ""; 
             supplier_textBox.Text = "";
@@ -175,8 +169,6 @@ namespace ASRS_Interface
 
         private void ModifyPart_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 ListViewItem lvi = listBox.SelectedItems[0];
@@ -190,12 +182,11 @@ namespace ASRS_Interface
             catch (Exception ex) {
                 return;
             }
-        
         }
-        private void refreshListBox()
+        private void refreshListBox(PartCollection list)
         {
             listBox.Items.Clear();
-            foreach (Part p in partList)
+            foreach (Part p in list)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = p.BinID.ToString();
@@ -223,6 +214,7 @@ namespace ASRS_Interface
                 {
                     part = new Part();
                 }
+
                 part.BinID = BinID_textBox.Text;
                 part.Name = Name_textBox.Text;
                 part.Value = Value_textBox.Text;
@@ -255,9 +247,8 @@ namespace ASRS_Interface
             
             partSettings.Visible = false;
             printPartsToFile();
-            refreshListBox();
+            refreshListBox(partList);
         }
-        
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
@@ -272,6 +263,20 @@ namespace ASRS_Interface
         private void partSettings_close_Click(object sender, EventArgs e)
         {
             partSettings.Visible = false;
+        }
+
+        private void Search_textBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = Search_textBox.Text.Trim();
+
+            refreshListBox(partList.searchFor(searchTerm));
+        }
+
+        private void deletePart_Click(object sender, EventArgs e)
+        {
+            ListViewItem lvi = listBox.SelectedItems[0];
+            partList.removePartByBinID(lvi.Text);
+            refreshListBox(partList);
         }
     }
 }

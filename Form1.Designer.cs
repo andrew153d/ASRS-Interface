@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Search_textBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.deletePart = new System.Windows.Forms.Button();
             this.ModifyPart = new System.Windows.Forms.Button();
             this.AddPart = new System.Windows.Forms.Button();
             this.Store = new System.Windows.Forms.Button();
@@ -86,12 +86,13 @@
             this.storeBin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Search_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1070, 22);
-            this.textBox1.TabIndex = 1;
+            this.Search_textBox.Location = new System.Drawing.Point(209, 56);
+            this.Search_textBox.Name = "Search_textBox";
+            this.Search_textBox.Size = new System.Drawing.Size(1070, 22);
+            this.Search_textBox.TabIndex = 1;
+            this.Search_textBox.TextChanged += new System.EventHandler(this.Search_textBox_TextChanged);
             // 
             // button1
             // 
@@ -143,15 +144,16 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
             // 
-            // button6
+            // deletePart
             // 
-            this.button6.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(43, 667);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 109);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.deletePart.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePart.Location = new System.Drawing.Point(43, 667);
+            this.deletePart.Name = "deletePart";
+            this.deletePart.Size = new System.Drawing.Size(114, 109);
+            this.deletePart.TabIndex = 11;
+            this.deletePart.Text = "Delete Part";
+            this.deletePart.UseVisualStyleBackColor = true;
+            this.deletePart.Click += new System.EventHandler(this.deletePart_Click);
             // 
             // ModifyPart
             // 
@@ -195,11 +197,11 @@
             this.Retreive.TabIndex = 7;
             this.Retreive.Text = "Retreive Part";
             this.Retreive.UseVisualStyleBackColor = true;
-            this.Retreive.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // listBox
             // 
             this.listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(43)))), ((int)(((byte)(25)))));
+            this.listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.ForeColor = System.Drawing.Color.GhostWhite;
             this.listBox.HideSelection = false;
             this.listBox.Location = new System.Drawing.Point(209, 149);
@@ -242,7 +244,7 @@
             this.partSettings.Controls.Add(this.Name_textBox);
             this.partSettings.Controls.Add(this.quantity_counter);
             this.partSettings.Controls.Add(this.saveSettingsBtn);
-            this.partSettings.Location = new System.Drawing.Point(462, 84);
+            this.partSettings.Location = new System.Drawing.Point(459, 71);
             this.partSettings.Name = "partSettings";
             this.partSettings.Size = new System.Drawing.Size(511, 615);
             this.partSettings.TabIndex = 0;
@@ -558,7 +560,7 @@
             this.storeBin.Controls.Add(this.label5);
             this.storeBin.Controls.Add(this.textBox5);
             this.storeBin.Controls.Add(this.storeBin_Btn);
-            this.storeBin.Location = new System.Drawing.Point(163, 186);
+            this.storeBin.Location = new System.Drawing.Point(163, 164);
             this.storeBin.Name = "storeBin";
             this.storeBin.Size = new System.Drawing.Size(280, 183);
             this.storeBin.TabIndex = 13;
@@ -610,7 +612,7 @@
             this.Controls.Add(this.storeBin);
             this.Controls.Add(this.partSettings);
             this.Controls.Add(this.listBox);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.deletePart);
             this.Controls.Add(this.ModifyPart);
             this.Controls.Add(this.AddPart);
             this.Controls.Add(this.Store);
@@ -620,7 +622,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Search_textBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.partSettings.ResumeLayout(false);
@@ -639,13 +641,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Search_textBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button deletePart;
         private System.Windows.Forms.Button ModifyPart;
         private System.Windows.Forms.Button AddPart;
         private System.Windows.Forms.Button Store;
