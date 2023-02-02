@@ -41,22 +41,48 @@
             this.Retreive = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListView();
             this.partSettings = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.quantity_counter = new System.Windows.Forms.NumericUpDown();
             this.saveSettingsBtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.storeBin = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.storeBin_Btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Name_textBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Value_textBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BinID_textBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.package_textBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.voltageRating_textBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.powerRating_textBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.partNumber_textBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.supplier_textBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.BinX_counter = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.BinY_counter = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BinZ_counter = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.BinR_counter = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.BinW_counter = new System.Windows.Forms.NumericUpDown();
+            this.cancelStore = new System.Windows.Forms.Button();
             this.partSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_counter)).BeginInit();
             this.storeBin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BinX_counter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinY_counter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinZ_counter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinR_counter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinW_counter)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -185,15 +211,35 @@
             // partSettings
             // 
             this.partSettings.BackColor = System.Drawing.SystemColors.Desktop;
-            this.partSettings.Controls.Add(this.numericUpDown1);
-            this.partSettings.Controls.Add(this.saveSettingsBtn);
+            this.partSettings.Controls.Add(this.label14);
+            this.partSettings.Controls.Add(this.BinR_counter);
+            this.partSettings.Controls.Add(this.label15);
+            this.partSettings.Controls.Add(this.BinW_counter);
+            this.partSettings.Controls.Add(this.label13);
+            this.partSettings.Controls.Add(this.BinZ_counter);
+            this.partSettings.Controls.Add(this.label12);
+            this.partSettings.Controls.Add(this.BinY_counter);
+            this.partSettings.Controls.Add(this.label11);
+            this.partSettings.Controls.Add(this.BinX_counter);
+            this.partSettings.Controls.Add(this.label10);
+            this.partSettings.Controls.Add(this.supplier_textBox);
+            this.partSettings.Controls.Add(this.label9);
+            this.partSettings.Controls.Add(this.partNumber_textBox);
+            this.partSettings.Controls.Add(this.label8);
+            this.partSettings.Controls.Add(this.powerRating_textBox);
+            this.partSettings.Controls.Add(this.label7);
+            this.partSettings.Controls.Add(this.voltageRating_textBox);
+            this.partSettings.Controls.Add(this.label6);
             this.partSettings.Controls.Add(this.label4);
+            this.partSettings.Controls.Add(this.package_textBox);
             this.partSettings.Controls.Add(this.label3);
+            this.partSettings.Controls.Add(this.BinID_textBox);
             this.partSettings.Controls.Add(this.label2);
+            this.partSettings.Controls.Add(this.Value_textBox);
             this.partSettings.Controls.Add(this.label1);
-            this.partSettings.Controls.Add(this.textBox4);
-            this.partSettings.Controls.Add(this.textBox3);
-            this.partSettings.Controls.Add(this.textBox2);
+            this.partSettings.Controls.Add(this.Name_textBox);
+            this.partSettings.Controls.Add(this.quantity_counter);
+            this.partSettings.Controls.Add(this.saveSettingsBtn);
             this.partSettings.Location = new System.Drawing.Point(462, 84);
             this.partSettings.Name = "partSettings";
             this.partSettings.Size = new System.Drawing.Size(511, 615);
@@ -201,21 +247,21 @@
             this.partSettings.TabStop = false;
             this.partSettings.Text = "Part Settings";
             // 
-            // numericUpDown1
+            // quantity_counter
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 240);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.quantity_counter.Location = new System.Drawing.Point(227, 199);
+            this.quantity_counter.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(174, 22);
-            this.numericUpDown1.TabIndex = 9;
+            this.quantity_counter.Name = "quantity_counter";
+            this.quantity_counter.Size = new System.Drawing.Size(174, 22);
+            this.quantity_counter.TabIndex = 9;
             // 
             // saveSettingsBtn
             // 
-            this.saveSettingsBtn.Location = new System.Drawing.Point(161, 424);
+            this.saveSettingsBtn.Location = new System.Drawing.Point(154, 523);
             this.saveSettingsBtn.Name = "saveSettingsBtn";
             this.saveSettingsBtn.Size = new System.Drawing.Size(196, 61);
             this.saveSettingsBtn.TabIndex = 8;
@@ -223,69 +269,13 @@
             this.saveSettingsBtn.UseVisualStyleBackColor = true;
             this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Quantity";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 193);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Package";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Value";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Name";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(161, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(270, 22);
-            this.textBox4.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(161, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 22);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(161, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 22);
-            this.textBox2.TabIndex = 0;
-            // 
             // storeBin
             // 
+            this.storeBin.Controls.Add(this.cancelStore);
             this.storeBin.Controls.Add(this.label5);
             this.storeBin.Controls.Add(this.textBox5);
             this.storeBin.Controls.Add(this.storeBin_Btn);
-            this.storeBin.Location = new System.Drawing.Point(163, 175);
+            this.storeBin.Location = new System.Drawing.Point(163, 186);
             this.storeBin.Name = "storeBin";
             this.storeBin.Size = new System.Drawing.Size(280, 183);
             this.storeBin.TabIndex = 13;
@@ -310,13 +300,296 @@
             // 
             // storeBin_Btn
             // 
-            this.storeBin_Btn.Location = new System.Drawing.Point(100, 119);
+            this.storeBin_Btn.Location = new System.Drawing.Point(46, 121);
             this.storeBin_Btn.Name = "storeBin_Btn";
             this.storeBin_Btn.Size = new System.Drawing.Size(75, 23);
             this.storeBin_Btn.TabIndex = 0;
             this.storeBin_Btn.Text = "Store Bin";
             this.storeBin_Btn.UseVisualStyleBackColor = true;
             this.storeBin_Btn.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(104, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Name";
+            // 
+            // Name_textBox
+            // 
+            this.Name_textBox.Location = new System.Drawing.Point(177, 76);
+            this.Name_textBox.Name = "Name_textBox";
+            this.Name_textBox.Size = new System.Drawing.Size(270, 22);
+            this.Name_textBox.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(92, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Value";
+            // 
+            // Value_textBox
+            // 
+            this.Value_textBox.Location = new System.Drawing.Point(177, 117);
+            this.Value_textBox.Name = "Value_textBox";
+            this.Value_textBox.Size = new System.Drawing.Size(270, 22);
+            this.Value_textBox.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(80, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Bin ID";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // BinID_textBox
+            // 
+            this.BinID_textBox.Location = new System.Drawing.Point(177, 32);
+            this.BinID_textBox.Name = "BinID_textBox";
+            this.BinID_textBox.Size = new System.Drawing.Size(270, 22);
+            this.BinID_textBox.TabIndex = 14;
+            this.BinID_textBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(68, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 23);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Package";
+            // 
+            // package_textBox
+            // 
+            this.package_textBox.Location = new System.Drawing.Point(177, 158);
+            this.package_textBox.Name = "package_textBox";
+            this.package_textBox.Size = new System.Drawing.Size(270, 22);
+            this.package_textBox.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(56, 199);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 23);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Quantity";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(68, 240);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 23);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Voltage";
+            // 
+            // voltageRating_textBox
+            // 
+            this.voltageRating_textBox.Location = new System.Drawing.Point(177, 240);
+            this.voltageRating_textBox.Name = "voltageRating_textBox";
+            this.voltageRating_textBox.Size = new System.Drawing.Size(270, 22);
+            this.voltageRating_textBox.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(74, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 23);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Power";
+            // 
+            // powerRating_textBox
+            // 
+            this.powerRating_textBox.Location = new System.Drawing.Point(177, 280);
+            this.powerRating_textBox.Name = "powerRating_textBox";
+            this.powerRating_textBox.Size = new System.Drawing.Size(270, 22);
+            this.powerRating_textBox.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(20, 323);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 23);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Part Number";
+            // 
+            // partNumber_textBox
+            // 
+            this.partNumber_textBox.Location = new System.Drawing.Point(177, 323);
+            this.partNumber_textBox.Name = "partNumber_textBox";
+            this.partNumber_textBox.Size = new System.Drawing.Size(270, 22);
+            this.partNumber_textBox.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(56, 365);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 23);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Supplier";
+            // 
+            // supplier_textBox
+            // 
+            this.supplier_textBox.Location = new System.Drawing.Point(177, 366);
+            this.supplier_textBox.Name = "supplier_textBox";
+            this.supplier_textBox.Size = new System.Drawing.Size(270, 22);
+            this.supplier_textBox.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(92, 408);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 23);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Bin X";
+            // 
+            // BinX_counter
+            // 
+            this.BinX_counter.Location = new System.Drawing.Point(186, 408);
+            this.BinX_counter.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.BinX_counter.Name = "BinX_counter";
+            this.BinX_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinX_counter.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label12.Location = new System.Drawing.Point(92, 436);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 23);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Bin Y";
+            // 
+            // BinY_counter
+            // 
+            this.BinY_counter.Location = new System.Drawing.Point(186, 436);
+            this.BinY_counter.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.BinY_counter.Name = "BinY_counter";
+            this.BinY_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinY_counter.TabIndex = 29;
+            this.BinY_counter.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Location = new System.Drawing.Point(92, 464);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 23);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Bin Z";
+            // 
+            // BinZ_counter
+            // 
+            this.BinZ_counter.Location = new System.Drawing.Point(187, 464);
+            this.BinZ_counter.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.BinZ_counter.Name = "BinZ_counter";
+            this.BinZ_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinZ_counter.TabIndex = 31;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label14.Location = new System.Drawing.Point(267, 442);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 23);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Bin R";
+            // 
+            // BinR_counter
+            // 
+            this.BinR_counter.Location = new System.Drawing.Point(391, 442);
+            this.BinR_counter.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.BinR_counter.Name = "BinR_counter";
+            this.BinR_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinR_counter.TabIndex = 35;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label15.Location = new System.Drawing.Point(267, 414);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 23);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Bin Width";
+            // 
+            // BinW_counter
+            // 
+            this.BinW_counter.Location = new System.Drawing.Point(391, 415);
+            this.BinW_counter.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.BinW_counter.Name = "BinW_counter";
+            this.BinW_counter.Size = new System.Drawing.Size(59, 22);
+            this.BinW_counter.TabIndex = 33;
+            // 
+            // cancelStore
+            // 
+            this.cancelStore.Location = new System.Drawing.Point(150, 121);
+            this.cancelStore.Name = "cancelStore";
+            this.cancelStore.Size = new System.Drawing.Size(75, 23);
+            this.cancelStore.TabIndex = 3;
+            this.cancelStore.Text = "Cancel";
+            this.cancelStore.UseVisualStyleBackColor = true;
+            this.cancelStore.Click += new System.EventHandler(this.cancelStore_Click);
             // 
             // Form1
             // 
@@ -340,12 +613,16 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.partSettings.ResumeLayout(false);
             this.partSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_counter)).EndInit();
             this.storeBin.ResumeLayout(false);
             this.storeBin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BinX_counter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinY_counter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinZ_counter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinR_counter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BinW_counter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,19 +642,40 @@
         private System.Windows.Forms.Button Retreive;
         private System.Windows.Forms.ListView listBox;
         private System.Windows.Forms.GroupBox partSettings;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown quantity_counter;
         private System.Windows.Forms.Button saveSettingsBtn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox storeBin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button storeBin_Btn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox BinID_textBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Value_textBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Name_textBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown BinX_counter;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox supplier_textBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox partNumber_textBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox powerRating_textBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox voltageRating_textBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox package_textBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown BinZ_counter;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown BinY_counter;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown BinR_counter;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown BinW_counter;
+        private System.Windows.Forms.Button cancelStore;
     }
 }
 

@@ -15,15 +15,21 @@ namespace ASRS_Interface
         public int Quantity{ get; set; }
         public int voltageRating { get; set; }
         public int powerRating { get; set; }
-        public int Part_Number { get; set; }
+        public string Part_Number { get; set; }
+        public string Supplier{ get; set; }
+        public int Bin_X { get; set; }
+        public int Bin_Y { get; set; }
+        public int Bin_Z { get; set; }
+        public int Bin_Width { get; set; }
+        public int Bin_R { get; set; }
 
-
-        public int ID { get; set; }
 
 
         public override string ToString()
         {
-            return Value.PadRight(10) + Name.PadRight(10) + Package.PadRight(10);
+            return BinID.ToString() + ',' + Name + "," + Value.ToString() + "," + Package.ToString() + "," + Quantity.ToString() + "," + voltageRating.ToString() + ","
+                + powerRating.ToString() + "," + Part_Number.ToString() + "," + Supplier.ToString() + "," + Bin_X.ToString() + "," + Bin_Y.ToString() + ","
+                + Bin_Z.ToString() + "," + Bin_Width.ToString() + "," + Bin_R.ToString();
         }
         public override bool Equals(object obj)
         {
@@ -34,12 +40,12 @@ namespace ASRS_Interface
         }
         public override int GetHashCode()
         {
-            return ID;
+            return BinID;
         }
         public bool Equals(Part other)
         {
             if (other == null) return false;
-            return (this.ID.Equals(other.ID));
+            return (this.BinID.Equals(other.BinID));
         }
         public static bool operator ==(Part a, Part b)
         {
@@ -56,7 +62,7 @@ namespace ASRS_Interface
             }
 
             // Return true if the fields match:
-            return a.ID == b.ID;
+            return a.BinID == b.BinID;
         }
         public static bool operator !=(Part a, Part b)
         {

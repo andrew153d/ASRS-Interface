@@ -1,5 +1,2 @@
-﻿Bin ID | Name | Value | Package | Quantity | Voltage Rating | Power Rating | Supplier Part Number | Supplier
-1023,Switch Tact,~,SMT,25,~,~,~,~
-9023,Red LED,~,SMD,100,~,~,~,~
-2313,Resistor,130,0402,100,~,~,~,~
-3142,Capacitor,10uf,0603,95,~,~,~,Digikey
+Bin ID|Name|Value|Package|Quantity|Voltage Rating|Power Rating|Supplier Part Number|Supplier|Bin X|Bin Y|Bin Z|Bin Width|Bin Rotation
+3452,Capacitor,10uf,0603,10,16,0,laiwud8,Digikey,0,0,0,30,0
