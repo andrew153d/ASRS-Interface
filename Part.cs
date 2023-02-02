@@ -8,13 +8,17 @@ namespace ASRS_Interface
 {
     public class Part : IEquatable<Part>
     {
+        public int BinID { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
-        public int Quantity{ get; set; }
         public string Package { get; set; }
-        public int Bin { get; set; }
+        public int Quantity{ get; set; }
+        public int voltageRating { get; set; }
+        public int powerRating { get; set; }
+        public int Part_Number { get; set; }
+
+
         public int ID { get; set; }
-        public string voltageRating { get; set; }
 
 
         public override string ToString()

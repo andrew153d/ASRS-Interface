@@ -31,6 +31,9 @@ namespace ASRS_Interface
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            partSettings.Visible = false; //disable PartSettings Window
+            storeBin.Visible = false;     //disable part place window
+
             listBox.View = View.Details;
             listBox.FullRowSelect = true;
             listBox.AllowColumnReorder = true;
@@ -49,7 +52,7 @@ namespace ASRS_Interface
                     string line = sr.ReadLine();
                     string[] values = line.Split(',');
                     Part part = new Part();
-                    part.Bin = int.Parse(values[0]);
+                    part.BinID = int.Parse(values[0]);
                     part.Name = values[1];
                     part.Value = values[2];
                     part.Package = values[3];
@@ -74,16 +77,6 @@ namespace ASRS_Interface
            
         }
 
-        private void mylist_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
@@ -97,6 +90,31 @@ namespace ASRS_Interface
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Store_Click(object sender, EventArgs e)
+        {
+            storeBin.Visible = true;
+        }
+
+        private void AddPart_Click(object sender, EventArgs e)
+        {
+            partSettings.Visible = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            storeBin.Visible = false;
+        }
+
+        private void ModifyPart_Click(object sender, EventArgs e)
+        {
+            partSettings.Visible = true;
+        }
+
+        private void saveSettingsBtn_Click(object sender, EventArgs e)
+        {
+            partSettings.Visible = false;
         }
     }
 }
