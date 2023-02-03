@@ -76,6 +76,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.storeBin_Btn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.partSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BinR_counter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BinW_counter)).BeginInit();
@@ -84,13 +88,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.BinX_counter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_counter)).BeginInit();
             this.storeBin.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Search_textBox
             // 
-            this.Search_textBox.Location = new System.Drawing.Point(209, 56);
+            this.Search_textBox.Location = new System.Drawing.Point(7, 24);
             this.Search_textBox.Name = "Search_textBox";
-            this.Search_textBox.Size = new System.Drawing.Size(1070, 22);
+            this.Search_textBox.Size = new System.Drawing.Size(1338, 34);
             this.Search_textBox.TabIndex = 1;
             this.Search_textBox.TextChanged += new System.EventHandler(this.Search_textBox_TextChanged);
             // 
@@ -147,7 +153,7 @@
             // deletePart
             // 
             this.deletePart.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletePart.Location = new System.Drawing.Point(43, 667);
+            this.deletePart.Location = new System.Drawing.Point(25, 587);
             this.deletePart.Name = "deletePart";
             this.deletePart.Size = new System.Drawing.Size(114, 109);
             this.deletePart.TabIndex = 11;
@@ -158,7 +164,7 @@
             // ModifyPart
             // 
             this.ModifyPart.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifyPart.Location = new System.Drawing.Point(43, 513);
+            this.ModifyPart.Location = new System.Drawing.Point(25, 447);
             this.ModifyPart.Name = "ModifyPart";
             this.ModifyPart.Size = new System.Drawing.Size(114, 109);
             this.ModifyPart.TabIndex = 10;
@@ -169,7 +175,7 @@
             // AddPart
             // 
             this.AddPart.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddPart.Location = new System.Drawing.Point(43, 365);
+            this.AddPart.Location = new System.Drawing.Point(25, 309);
             this.AddPart.Name = "AddPart";
             this.AddPart.Size = new System.Drawing.Size(114, 109);
             this.AddPart.TabIndex = 9;
@@ -180,7 +186,7 @@
             // Store
             // 
             this.Store.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Store.Location = new System.Drawing.Point(43, 208);
+            this.Store.Location = new System.Drawing.Point(25, 167);
             this.Store.Name = "Store";
             this.Store.Size = new System.Drawing.Size(114, 109);
             this.Store.TabIndex = 8;
@@ -191,7 +197,7 @@
             // Retreive
             // 
             this.Retreive.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Retreive.Location = new System.Drawing.Point(43, 56);
+            this.Retreive.Location = new System.Drawing.Point(25, 33);
             this.Retreive.Name = "Retreive";
             this.Retreive.Size = new System.Drawing.Size(114, 109);
             this.Retreive.TabIndex = 7;
@@ -201,11 +207,11 @@
             // 
             // listBox
             // 
-            this.listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(43)))), ((int)(((byte)(25)))));
+            this.listBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(69)))), ((int)(((byte)(66)))));
             this.listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox.ForeColor = System.Drawing.Color.GhostWhite;
             this.listBox.HideSelection = false;
-            this.listBox.Location = new System.Drawing.Point(209, 149);
+            this.listBox.Location = new System.Drawing.Point(7, 117);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(1070, 420);
             this.listBox.TabIndex = 12;
@@ -214,7 +220,7 @@
             // 
             // partSettings
             // 
-            this.partSettings.BackColor = System.Drawing.SystemColors.Desktop;
+            this.partSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(99)))), ((int)(((byte)(50)))));
             this.partSettings.Controls.Add(this.partSettings_close);
             this.partSettings.Controls.Add(this.label14);
             this.partSettings.Controls.Add(this.BinR_counter);
@@ -246,9 +252,11 @@
             this.partSettings.Controls.Add(this.quantity_counter);
             this.partSettings.Controls.Add(this.saveSettingsBtn);
             this.partSettings.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partSettings.Location = new System.Drawing.Point(459, 71);
+            this.partSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.partSettings.Location = new System.Drawing.Point(446, 12);
             this.partSettings.Name = "partSettings";
-            this.partSettings.Size = new System.Drawing.Size(521, 615);
+            this.partSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.partSettings.Size = new System.Drawing.Size(522, 636);
             this.partSettings.TabIndex = 0;
             this.partSettings.TabStop = false;
             this.partSettings.Text = "Part Settings";
@@ -256,6 +264,7 @@
             // partSettings_close
             // 
             this.partSettings_close.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.partSettings_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.partSettings_close.Location = new System.Drawing.Point(280, 526);
             this.partSettings_close.Name = "partSettings_close";
             this.partSettings_close.Size = new System.Drawing.Size(196, 61);
@@ -564,6 +573,7 @@
             // saveSettingsBtn
             // 
             this.saveSettingsBtn.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSettingsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveSettingsBtn.Location = new System.Drawing.Point(49, 526);
             this.saveSettingsBtn.Name = "saveSettingsBtn";
             this.saveSettingsBtn.Size = new System.Drawing.Size(196, 61);
@@ -574,19 +584,26 @@
             // 
             // storeBin
             // 
+            this.storeBin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(99)))), ((int)(((byte)(50)))));
+            this.storeBin.Controls.Add(this.groupBox1);
             this.storeBin.Controls.Add(this.cancelStore);
             this.storeBin.Controls.Add(this.label5);
             this.storeBin.Controls.Add(this.textBox5);
             this.storeBin.Controls.Add(this.storeBin_Btn);
-            this.storeBin.Location = new System.Drawing.Point(163, 164);
+            this.storeBin.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeBin.ForeColor = System.Drawing.SystemColors.Control;
+            this.storeBin.Location = new System.Drawing.Point(202, 198);
             this.storeBin.Name = "storeBin";
             this.storeBin.Size = new System.Drawing.Size(280, 183);
             this.storeBin.TabIndex = 13;
             this.storeBin.TabStop = false;
             this.storeBin.Text = "Store Bin";
+            this.storeBin.Visible = false;
             // 
             // cancelStore
             // 
+            this.cancelStore.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelStore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cancelStore.Location = new System.Drawing.Point(150, 121);
             this.cancelStore.Name = "cancelStore";
             this.cancelStore.Size = new System.Drawing.Size(75, 23);
@@ -598,21 +615,24 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 44);
+            this.label5.Location = new System.Drawing.Point(15, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 16);
+            this.label5.Size = new System.Drawing.Size(259, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Enter the Bin ID to Store";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(85, 76);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.Size = new System.Drawing.Size(114, 27);
             this.textBox5.TabIndex = 1;
             // 
             // storeBin_Btn
             // 
+            this.storeBin_Btn.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeBin_Btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.storeBin_Btn.Location = new System.Drawing.Point(46, 121);
             this.storeBin_Btn.Name = "storeBin_Btn";
             this.storeBin_Btn.Size = new System.Drawing.Size(75, 23);
@@ -621,26 +641,71 @@
             this.storeBin_Btn.UseVisualStyleBackColor = true;
             this.storeBin_Btn.Click += new System.EventHandler(this.button8_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Location = new System.Drawing.Point(0, 185);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(280, 139);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBox);
+            this.groupBox2.Controls.Add(this.Search_textBox);
+            this.groupBox2.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox2.Location = new System.Drawing.Point(213, 31);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1089, 548);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Part Search";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox3.Location = new System.Drawing.Point(215, 595);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1086, 164);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Robot Control";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.ModifyPart);
+            this.groupBox4.Controls.Add(this.AddPart);
+            this.groupBox4.Controls.Add(this.Store);
+            this.groupBox4.Controls.Add(this.Retreive);
+            this.groupBox4.Controls.Add(this.deletePart);
+            this.groupBox4.Location = new System.Drawing.Point(32, 31);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(164, 728);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1476, 810);
-            this.Controls.Add(this.storeBin);
             this.Controls.Add(this.partSettings);
-            this.Controls.Add(this.listBox);
-            this.Controls.Add(this.deletePart);
-            this.Controls.Add(this.ModifyPart);
-            this.Controls.Add(this.AddPart);
-            this.Controls.Add(this.Store);
-            this.Controls.Add(this.Retreive);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.storeBin);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Search_textBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.partSettings.ResumeLayout(false);
@@ -653,8 +718,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantity_counter)).EndInit();
             this.storeBin.ResumeLayout(false);
             this.storeBin.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -707,6 +774,10 @@
         private System.Windows.Forms.NumericUpDown BinW_counter;
         private System.Windows.Forms.Button cancelStore;
         private System.Windows.Forms.Button partSettings_close;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

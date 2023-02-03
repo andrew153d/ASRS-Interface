@@ -77,9 +77,9 @@ namespace ASRS_Interface
             listBox.AllowColumnReorder = true;
             //listBox.CheckBoxes = true; //uncomment when multiple part retreivl is possbile
             
-            listBox.Columns.Add(Bin_ID_String, 100,      HorizontalAlignment.Center);
-            listBox.Columns.Add(Part_Name_String, 100,  HorizontalAlignment.Center);
-            listBox.Columns.Add(Part_Value_String, 100, HorizontalAlignment.Center);
+            listBox.Columns.Add(Bin_ID_String, 100,       HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Name_String, 100,     HorizontalAlignment.Center);
+            listBox.Columns.Add(Part_Value_String, 100,   HorizontalAlignment.Center);
             listBox.Columns.Add(Part_Package_String, 100, HorizontalAlignment.Center);
             listBox.Columns.Add(Part_Quantity_String, 100, HorizontalAlignment.Center);
             listBox.Columns.Add(Part_VRating_String, 100, HorizontalAlignment.Center);
@@ -306,6 +306,21 @@ namespace ASRS_Interface
                 return;
             }
             
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
