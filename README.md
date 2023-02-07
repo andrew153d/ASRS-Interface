@@ -6,4 +6,6 @@
  
  ## Future Ideas
  System to take picture of item and automatically provide selectable options for part storage
+ Inerface with Inventree
+ 
  
