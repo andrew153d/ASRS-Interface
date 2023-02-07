@@ -282,7 +282,7 @@ namespace ASRS_Interface
             string searchTerm = Search_textBox.Text.Trim();
 
             refreshListBox(partList.searchFor(searchTerm));
-        }
+        } 
 
         private void deletePart_Click(object sender, EventArgs e)
         {
@@ -321,6 +321,16 @@ namespace ASRS_Interface
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void capacitorButton_Click(object sender, EventArgs e)
+        {
+            Search_textBox.Text = "Cap";
+        }
+
+        private void resistorSearch_Click(object sender, EventArgs e)
+        {
+            Search_textBox.Text = "Res";
         }
     }
 }
