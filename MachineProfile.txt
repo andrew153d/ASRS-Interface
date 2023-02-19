@@ -7,7 +7,11 @@ Bin ID|Name|Value|Package|Quantity|Voltage Rating|Power Rating|Supplier Part Num
 7326,Resistor,47k,0402,96,,1/10W,,Digikey,0,0,0,0,0,1
 8224,Switch Tactile button,250GF,SMT,25,,,,Digikey,0,0,0,0,0,1
 6993,RED LED,1.7Vf,0603ish,100,,,,Digikey,0,0,0,0,0,2
-7470,ESP32-C3-MINI-1,,,5,,,,Digikey,0,0,0,0,0,5
-7384,Linear Regulator,5V 1A,SOT223,10,5,,AZ1117IH-5.0TRG1DICT-ND,Digikey,0,0,0,0,0,6
+7470,ESP32-C3-MINI-1,,,5,,,,Digikey,1,0,0,0,0,5
+7384,Linear Regulator,5V 1A,SOT223,10,,,,Digikey,0,0,0,0,0,6
 3528,DRV8311H,,,10,,,,Digikey,0,0,0,0,0,2
 6381,Linear Regulator 3.3V,3.3V 1A ,SOT223,10,,,,Digikey,0,0,0,0,0,2
+8425,TLV439DA Rotart Sensor,,SMD,5,,,TLV493DA1B6HTSA2,Digikey,0,0,0,0,0,0
+2454,Capacitor,1uf,0402,100,16V,,1276-1067-1-ND,,0,0,0,0,0,0
+4162,Resistor,10k,0402,10,,1/10W,,Digikey,0,0,0,0,0,0
+2759,Capacitor,22uf,0402,10,6.3V,,,Digikey,0,0,0,0,0,0

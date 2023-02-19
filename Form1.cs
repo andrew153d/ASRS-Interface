@@ -69,13 +69,13 @@ namespace ASRS_Interface
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            partSettings.Visible = false; //disable PartSettings Window
+            //partSettings.Visible = false; //disable PartSettings Window
             storeBin.Visible = false;     //disable part place window
 
             listBox.View = View.Details;
             listBox.FullRowSelect = true;
             listBox.AllowColumnReorder = true;
-            //listBox.CheckBoxes = true; //uncomment when multiple part retreivl is possbile
+            //listBox.CheckBoxes = true; //uncomment when multiple part retrieval is possbile
             
             listBox.Columns.Add(Bin_ID_String, 100,       HorizontalAlignment.Center);
             listBox.Columns.Add(Part_Name_String, 100,     HorizontalAlignment.Center);
@@ -130,7 +130,7 @@ namespace ASRS_Interface
 
         private void AddPart_Click(object sender, EventArgs e)
         {
-            partSettings.Visible = true;
+            //partSettings.Visible = true;
             BinID_textBox.Text = "";
             Name_textBox.Text = "";
             Value_textBox.Text = "";
@@ -177,11 +177,12 @@ namespace ASRS_Interface
             {
                 ListViewItem lvi = listBox.SelectedItems[0];
                 Console.WriteLine(lvi.Text);
-                partSettings.Visible = true;
+                //partSettings.Visible = true;
                 Part p = partList.getPartByBinID(lvi.Text);
                 ModifyPartflag = true;
                 partToModify = p;
                 loadPartSettings(ref p);
+                MainPage.SelectedTab = tabPage2;
             }
             catch (Exception ex) {
                 return;
@@ -257,9 +258,10 @@ namespace ASRS_Interface
                 return;
             }
             
-            partSettings.Visible = false;
+            //partSettings.Visible = false;
             printPartsToFile();
             refreshListBox(partList);
+            MainPage.SelectedTab = tabPage1;
         }
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
@@ -274,7 +276,7 @@ namespace ASRS_Interface
 
         private void partSettings_close_Click(object sender, EventArgs e)
         {
-            partSettings.Visible = false;
+           // partSettings.Visible = false;
         }
 
         private void Search_textBox_TextChanged(object sender, EventArgs e)
@@ -332,5 +334,31 @@ namespace ASRS_Interface
         {
             Search_textBox.Text = "Res";
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BinID_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
