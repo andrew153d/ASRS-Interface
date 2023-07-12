@@ -6,7 +6,7 @@
  
  ## Future Ideas
  System to take picture of item and automatically provide selectable options for part storage
- Inerface with Inventree
+ interface with Inventree
  Allow for some sort of system so that a BOM can be sent to the software, and it will retreive all parts
  Integrate codebase to a more official structure
 
